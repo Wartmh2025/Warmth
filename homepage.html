@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Warmth</title>
+        <!-- Linking Font Awesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!-- Linking Swiper CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+ <!-- Google reCAPTCHA -->
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+
+    </head>
+    <body>
+        <!-- Header / Navbar -->
+        <header>
+            <nav class="navbar section-content">
+                <a href="#" class="nav-logo">
+                    <img src="logo.png" alt="Logo" class="logo-img">
+                    <h2 class="logo-text">Warmth</h2>
+                </a>
+                <ul class="nav-menu">
+                    <button id="menu-close-button" class="fas fa-times"></button>
+
+
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#product" class="nav-link">Produt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Login Icon -->
+                <button id="login-toggle" class="nav-link login-icon">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                    </li>
+                </ul>
+                <button id="menu-open-button" class="fas fa-bars"></button>
+            </nav>
+        </header>      
+
+
+     <!-- Login / Sign-Up Section (Initially Hidden) -->
+    <section id="login-section" class="login-section">
+        <div class="login-container">
+            <span id="close-login" class="close-btn">&times;</span>
+            <h2>Log In</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+
+
+                <!-- Google reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LdxpbsqAAAAABoVp7rc_FSXQ9icBMj-eR-VPwHb"></div>
+
+
+                <div class="privacy-statement">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">I agree to the <a href="#">Privacy Policy</a></label>
+                </div>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+           
+            <!-- Hero section -->
+            <section class="hero-section">
+                <div class="section-content">
+                    <div class="hero-details">
+                        <h2 class="title">Sand Candle</h2>
+                        <p class="description">WELCOME TO OUR LIGHT PARADISE.</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Menu section -->
+<section class="menu-section" id="product">
+    <h2 class="section-title">Product</h2>
+    <div class="section-content">
+        <div class="slider-container swiper">
+            <div class="swiper-wrapper">
+                <!-- Product 1 -->
+                <div class="menu-item swiper-slide" onclick="showProductDetails('product1')">
+                    <div class="product-card" id="product1-card">
+                        <img src="aa.jpg" alt="Product 1" class="menu-image" id="product1-img">
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="menu-item swiper-slide" onclick="showProductDetails('product2')">
+                    <div class="product-card" id="product2-card">
+                        <img src="WW.jpg" alt="Product 2" class="menu-image" id="product2-img">
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="menu-item swiper-slide" onclick="showProductDetails('product3')">
+                    <div class="product-card" id="product3-card">
+                        <img src="cc.jpg" alt="Product 3" class="menu-image" id="product3-img">
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="menu-item swiper-slide" onclick="showProductDetails('product4')">
+                    <div class="product-card" id="product4-card">
+                        <img src="dd.jpg" alt="Product 4" class="menu-image" id="product4-img">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Swiper Pagination & Navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal (hidden by default) -->
+<div id="product-modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-product-info">
+            <!-- Dynamic product details will be injected here -->
+        </div>
+    </div>
+</div>
+
+
+            <!-- About section -->
+            <section class="about-section" id="about">
+                <div class="section-content">
+                    <div class="about-image-wrapper">
+                        <img src="about1.jpg" alt="About" class="about-image">
+                    </div>
+                    <div class="about-details">
+                        <h2 class="section-title">About   Us</h2>
+                        <p class="text">WARMTH is a sand candle business that offers
+                            handmade products with creativity, customizable design, a personal touch, and decorative appeal.
+                            Since it's made of sand, we can create a variety of textures and colors that enhance the aesthetic
+                            value of our candles. This allows us to cater to diverse tastes while maintaining the charm of
+                            handcrafted artistry. A variety of images and patterns that enhance the aesthetic appeal of any
+                            space. This unique approach allows customers to personalize their candles, making each piece a
+                            distinct work of art.</p>
+                            <div class="social-link-list">
+                                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Team section -->
+            <section class="team-section" id="team">
+                <h2 class="section-title">Team</h2>
+                <div class="section-content">
+                    <div class="slider-container swiper">
+                        <div class="swiper-wrapper">
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Luisa Lappay</h3>
+                                <i class="feedback"></i>
+                            </div>
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Josephine Dela Cruz</h3>
+                                <i class="feedback"></i>
+                            </div>
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Alliyah Cabinan</h3>
+                                <i class="feedback"></i>
+                            </div>
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Hannah Artugue</h3>
+                                <i class="feedback"></i>
+                            </div>
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Drysdale Queliza</h3>
+                                <i class="feedback"></i>
+                            </div>
+                            <div class="team swiper-slide">
+                                <img src="pek.webp" alt="User" class="user-image">
+                                <h3 class="name">Richjob San Miguel</h3>
+                                <i class="feedback"></i>
+                            </div>
+                        </div>
+           
+                        <!-- Swiper Pagination & Navigation -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </section>
+
+
+           
+        <!-- Chatbot Trigger Button (Icon) -->
+<button id="chatbot-toggle" title="Chat with us">
+    <img src="https://cdn-icons-png.flaticon.com/512/1782/1782765.png" alt="Chat Icon" width="40">
+</button>
+
+
+<!-- Chatbot Container -->
+<div id="chatbot">
+    <div id="chatbot-header">
+        <span>Seereach</span>
+        <button id="chatbot-close">X</button> <!-- Close Button -->
+    </div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <textarea id="chatbot-textarea" placeholder="Ask something..."></textarea>
+        <button id="chatbot-send">Send</button>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-content">
+        <!-- Footer Logo and Company Info -->
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo" class="footer-logo-img">
+            <h2 class="footer-logo-text">Warmth</h2>
+            <p>&copy; 2024 Warmth. All Rights Reserved.</p>
+        </div>
+
+
+        <!-- Footer Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Footer Social Media -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Bottom (Legal & Contact) -->
+    <div class="footer-bottom">
+        <p>Contact us: <a href="mailto:info@warmth.com">info@warmth.com</a></p>
+        <p>Powered by <a href="#">Warmth Technologies</a></p>
+    </div>
+</footer>
+
+
+        <script>
+    // JavaScript Functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbot = document.getElementById('chatbot');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotTextarea = document.getElementById('chatbot-textarea');
+    const chatbotSend = document.getElementById('chatbot-send');
+
+
+    // Toggle Chatbot
+    chatbotToggle.addEventListener('click', () => {
+        chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+
+    // Send Message (Button or Enter Key)
+    const sendMessage = () => {
+        const userMessage = chatbotTextarea.value.trim();
+        if (userMessage) {
+            // Display user message
+            const userMsgElem = document.createElement('div');
+            userMsgElem.textContent = userMessage;
+            chatbotMessages.appendChild(userMsgElem);
+
+
+            // Display bot response
+            setTimeout(() => {
+                const botMsgElem = document.createElement('div');
+                botMsgElem.textContent = "Thank you for your question! How can I assist you today?";
+                chatbotMessages.appendChild(botMsgElem);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }, 500);
+
+
+            chatbotTextarea.value = '';
+        }
+    };
+
+
+    chatbotSend.addEventListener('click', sendMessage);
+
+
+    // Send message when pressing "Enter"
+    chatbotTextarea.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault(); // Prevent newline
+            sendMessage();
+        }
+    });
+
+
+    // Close Chatbot
+    document.getElementById('chatbot-close').addEventListener('click', function () {
+        chatbot.style.display = 'none';
+    });
+   
+    </script>
+    <script>
+   document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.slider-container', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        speed: 600,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
+
+    console.log('Swiper initialized:', swiper);
+});
+
+
+  // Toggle login section visibility
+  const loginToggle = document.getElementById('login-toggle');
+        const loginSection = document.getElementById('login-section');
+        const closeLoginBtn = document.getElementById('close-login');
+
+
+        loginToggle.addEventListener('click', () => {
+            loginSection.style.display = 'flex'; // Change to flex for centering
+        });
+
+
+        closeLoginBtn.addEventListener('click', () => {
+            loginSection.style.display = 'none';
+        });
+
+
+        // Form submission logic
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+
+            const captchaResponse = grecaptcha.getResponse();
+
+
+            // Check if CAPTCHA is completed
+            if (!captchaResponse) {
+                alert('Please complete the CAPTCHA');
+                return;
+            }
+
+
+            // Here you would typically send the data (email, password, captchaResponse) to the server
+            alert(`Email: ${email}, Password: ${password} - Submitted Successfully`);
+            loginSection.style.display = 'none'; // Hide login section after submission
+        });
+    </script>
+
+
+        <!-- Linking Swiper script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+        <!-- Linking custom script -->
+        <script src="script.js"></script>
+    </body>
+    </html
+
+
+

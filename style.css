@@ -1,0 +1,1475 @@
+/* Importing Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Ballet:opsz@16..72&family=Birthstone&family=Caramel&family=Carattere&family=Cookie&family=Cormorant+Upright:wght@300;400;500;600;700&family=Felipa&family=Fleur+De+Leah&family=Glass+Antiqua&family=Great+Vibes&family=Gruppo&family=Italianno&family=Kings&family=Love+Light&family=Luxurious+Script&family=Mea+Culpa&family=Ms+Madi&family=My+Soul&family=Niconne&family=Parisienne&family=Pinyon+Script&family=Playball&family=Playwrite+DE+LA:wght@100..400&family=Playwrite+IN:wght@100..400&family=Playwrite+TZ+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Praise&family=Rochester&family=Satisfy&family=Style+Script&family=Suravaram&family=Tangerine:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Yesteryear&family=Yuji+Syuku&display=swap');
+
+
+/* Global font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Default font for general content */
+}
+
+
+/* Hero Section */
+.hero-section .hero-details .title {
+    font-family: "Carattere", serif;
+}
+
+
+/* Menu section */
+.menu-section .section-title {
+    font-family: "Playwrite DE LA", serif;
+}
+
+
+/* Warmth Section */
+.navbar .nav-logo .logo-text {
+    font-family: "Mea Culpa", serif;
+}
+
+
+/* Hero Section Description */
+.hero-section .hero-details .description {
+    font-family: "Yuji Syuku", serif;
+}
+
+
+/* About Section */
+.about-section .about-details .section-title {
+    font-family: "Carattere", serif;
+}
+
+
+.about-section .about-details .text {
+    font-family: "Suravaram", serif;
+}
+
+
+/* Team Section */
+.team-section .team .name {
+    font-family: "Playwrite IN", serif;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif; /* Set default font for body */
+}
+
+
+:root {
+    /* Colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #664229;
+    --secondary-color: #e5d3b3;
+    --light-pink-color: #d2b48c;
+    --medium-gray-color: #d2b48c;
+
+
+    /* Font Size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-1: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+
+    /* Font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Stylings for whole-site */
+ul {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: #664229;
+}
+
+
+/* Navbar styling */
+header {
+    position: fixed;
+    width: 100%; /* Full width */
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.6); /* Black with 60% opacity for a silhouette effect */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+
+header .navbar {
+    display: flex;
+    padding: 0 20px; /* Adjust horizontal padding if needed */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Ensure navbar spans full width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+
+body {
+    margin: 0; /* Ensure there’s no margin around the body */
+    padding: 0;
+}
+
+
+.navbar .nav-logo {
+    display: flex;
+    align-items: center; /* Align it to the logo */
+    gap: 10px; /* Space between logo and text */
+}
+
+
+.navbar .nav-logo .logo-img {
+    height: 6rem; /* Set logo height to match text */
+    width: auto;    /* Maintain aspect ratio */
+}
+
+
+.navbar .nav-logo .logo-text {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: var(--font-weight-semibold);
+}
+
+
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between navigation items */
+}
+
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: white;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+
+.header .icons div {
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+
+.header .icons div:hover {
+    color: #664229;
+}
+
+
+/* Center alignment for the action buttons */
+.actions {
+    display: flex;
+    align-items: center; /* Vertically center elements */
+    justify-content: center; /* Horizontally center elements */
+    gap: 10px; /* Equal spacing between items */
+    margin-top: 20px; /* Add spacing above the row */
+}
+
+
+/* Styling for the "I want this one" button */
+.cta-btn {
+    background-color: #ff5c8d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px; /* Set a fixed height for uniformity */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text inside */
+    transition: background-color 0.3s ease;
+}
+
+
+.cta-btn:hover {
+    background-color: #e04a78;
+}
+
+
+/* Styling for the Add to Cart icon */
+.add-to-cart-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    height: 40px; /* Match the height of the "I want this one" button */
+    width: 40px; /* Ensure the button has a width equal to its height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cart-icon {
+    width: 27px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Styling for the quantity adjuster */
+.add-to-cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.add-to-cart-quantity button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.add-to-cart-quantity span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Style for the checkbox and label alignment */
+.form-group {
+    display: flex;
+    align-items: center; /* Vertically aligns the checkbox and label text */
+    margin-top: 15px; /* Adds space above the checkbox section */
+    gap: 8px; /* Adds a horizontal gap between the checkbox and text */
+}
+
+
+#agree-checkbox {
+    margin: 0; /* Removes default margin around the checkbox */
+    cursor: pointer; /* Makes the checkbox clickable */
+}
+
+
+label[for="agree-checkbox"] {
+    font-size: 0.95rem; /* Adjust font size for readability */
+    color: #333; /* Label text color */
+    cursor: pointer; /* Clicking on the text checks the box */
+}
+
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+
+.modal.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px 30px;
+    width: 400px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.modal-subtitle {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* Hero section styling */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Prevent scrollbars */
+    align-items: flex-start; /* Aligns content to the left */
+    padding: 100px 20px; /* Extra space for login section */
+}
+
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    width: 100%; /* Ensures the content stretches across */
+}
+
+
+.hero-section .hero-details {
+    position: relative;
+    z-index: 2; /* Ensure it stays above the background */
+    display: flex;
+    flex-direction: column; /* Ensures elements stack vertically */
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 100px 20px; /* Extra space for login section */
+}
+
+
+.hero-section .hero-details .title {
+    font-size: 7.5rem;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-top: -130px; /* Maintain adjusted position */
+    margin-left: -40px; /* Slightly move "Sand Candle" to the left */
+}
+
+
+.hero-section .hero-details .description {
+    margin-top: -20px; /* Keep it close to "Sand Candle" */
+    margin-left: -40px; /* Move further to the left */
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-weight: var(--font-weight-normal);
+    text-align: center; /* Ensure alignment looks clean */
+}
+
+
+/* Login Section */
+.login-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.privacy-statement {
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.submit-btn {
+    color: #e5d3b3;
+}
+
+
+button:hover {
+    background-color: #664229;
+}
+
+
+#close-login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #664229;
+    cursor: pointer;
+}
+
+
+#close-login:hover {
+    color: #664229;
+}
+
+
+/* Adjust Navbar to Include Login Button */
+.navbar .nav-menu li:last-child {
+    margin-left: auto;
+}
+
+
+.login-icon i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.login-icon i:hover {
+    color: #664229;
+}
+
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+
+.image-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+.home .image-container image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Styling the buttons */
+.hero-section .hero-image-wrapper {
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+
+/* About section styling */
+.about-section {
+    padding: 120px 0;
+    background: black;
+}
+
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.about-section .about-image-wrapper .about-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid #e5d3b3; /* White border for visibility */
+    padding: 5px; /* Optional: adds space between the image and the border */
+    border-radius: var(--border-radius-circle);
+    display: block;
+}
+
+
+.about-section .about-details .section-title {
+    padding: 0;
+    color: white;
+}
+
+
+.about-section .about-details {
+    max-width: 50%;
+}
+
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.about-section .social-link-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+
+.about-section .social-link-list .social-link {
+    color: white;
+    font-size: var(--font-size-1);
+    transition: 0.2s ease;
+}
+
+
+.about-section .social-link-list .social-link:hover {
+    color: #664229;
+}
+
+
+/* Menu section styling */
+.menu-section {
+    color: var(--white-color);
+    background: white;
+    padding: 50px 0 100px;
+}
+
+
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu-section .menu-list .menu-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+}
+
+
+.menu-section .menu-list .menu-item .menu-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+
+.menu-section .menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-1);
+    font-family: "Playwrite IN", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: var(--font-weight-semibold);
+}
+
+
+.menu-section .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+}
+
+
+/* General product card styles */
+.product-card {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+
+.menu-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+.product-card:hover .menu-image {
+    transform: scale(1.1);
+}
+
+
+/* Modal Image Styling */
+.modal-product-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: auto;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+
+.close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.modal-content h3,
+.modal-content .price,
+.modal-content .description {
+    margin: 10px 0;
+}
+
+
+.modal-content .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+
+.modal-content .description {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.cta-btn {
+    background-color: #e91e63;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.cta-btn:hover {
+    background-color: #664229;
+    transform: scale(1.05);
+}
+
+
+/* General Styling for Team Section */
+.team-section {
+    padding: 40px;
+    background-color: #e5d3b3;
+    background-size: cover; /* Ensures the background image covers the entire section */
+    background-position: center; /* Centers the background image */
+    text-align: center;
+    width: 100%; /* Ensures full width of the page */
+    height: 500px; /* Set the height as per the requirement */
+    max-width: 100%; /* Prevents the section from expanding beyond the screen */
+    box-sizing: border-box; /* Ensures padding is included in the width and height calculation */
+}
+
+
+.section-title {
+    font-size: 3rem;
+    color: #664229;
+    margin-bottom: 20px;
+}
+
+
+.section-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Swiper Container Styling */
+.slider-container {
+    overflow: hidden;
+    position: relative;  /* For positioning navigation buttons */
+}
+
+
+/* Team List Styling */
+.team-list {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+
+/* Team Member Styling */
+.team {
+    background-color: #664229;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 0 calc(25% - 20px);
+    transition: transform 0.3s ease; /* Add smooth animation on hover */
+}
+
+
+.team:hover {
+    transform: scale(1.05); /* Hover effect to slightly scale the team item */
+}
+
+
+.user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+
+.name {
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0;
+}
+
+
+.feedback {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: none;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;  /* Ensure buttons are on top of other elements */
+}
+
+
+/* Position the previous and next buttons on left and right */
+.swiper-button-prev {
+    left: 10px;
+}
+
+
+.swiper-button-next {
+    right: 10px;
+}
+/* Swiper Pagination Dots */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.swiper-pagination-bullet {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+
+/* Basic styles for Next and Prev buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;  /* Transparent background */
+    color: #fff;  /* White arrow color */
+    border: none;
+    font-size: 30px;  /* Larger arrow size */
+    cursor: pointer;
+    z-index: 10;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+/* Position the buttons on the sides */
+.swiper-button-prev {
+    left: 15px;
+}
+
+
+.swiper-button-next {
+    right: 15px;
+}
+
+
+/* Arrow Icons (using CSS or Unicode symbols) */
+.swiper-button-prev::after {
+    content: '←';  /* Left arrow */
+    font-size: 36px;
+}
+
+
+.swiper-button-next::after {
+    content: '→';  /* Right arrow */
+    font-size: 36px;
+}
+
+
+/* Hover effect - subtle scaling */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.1);  /* Enlarge slightly when hovered */
+    opacity: 0.8;  /* Slight opacity change on hover */
+}
+
+
+/* Disabling button when not applicable (optional for disabled state) */
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;  /* Make the buttons unclickable */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 100% !important; /* Full-width on smaller screens */
+    }
+
+
+    .product-card {
+        margin: 10px;
+    }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    .team {
+        flex: 1 0 calc(50% - 20px); /* Adjust for 2 items per row on mobile */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .team {
+        flex: 1 0 100%; /* Full width for each team member on small screens */
+    }
+}
+
+
+/* Chatbot Trigger Icon Button */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10000; /* Ensures the button is always visible */
+}
+
+
+#chatbot-toggle img {
+    width: 60px;
+    height: 60px;
+}
+
+
+/* Chatbot Container */
+#chatbot {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    z-index: 9999; /* Ensures the chatbox is above all other elements */
+}
+
+
+/* Chatbox Header */
+#chatbot-header {
+    background: #3f51b5;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* Styled Close Button */
+#chatbot-header button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%; /* Circular button */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#chatbot-header button:focus {
+    outline: none; /* Remove focus border */
+}
+
+
+/* Chatbot Messages */
+#chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+
+#chatbot-messages div {
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+#chatbot-messages div:nth-child(odd) {
+    background: #e3f2fd;
+    align-self: flex-start;
+}
+
+
+#chatbot-messages div:nth-child(even) {
+    background: #c8e6c9;
+    align-self: flex-end;
+    text-align: right;
+}
+
+
+/* Chatbot Input */
+#chatbot-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+
+#chatbot-textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    font-size: 14px;
+    background: #f9f9f9;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#chatbot-send {
+    background: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+
+#chatbot-send:hover {
+    background: #3949ab;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+
+.footer-logo-img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+
+.footer-logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.footer-links {
+    flex: 1;
+    text-align: left;
+    padding-right: 40px;
+}
+
+
+.footer-links h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.footer-links a:hover {
+    color: #f1c40f;
+    text-decoration: underline;
+}
+
+
+.footer-social {
+    flex: 1;
+    text-align: left;
+}
+
+
+.footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+
+.social-link {
+    color: #fff;
+    font-size: 24px;
+}
+
+
+.social-link:hover {
+    color: #f1c40f;
+}
+
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer-bottom a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive media query code for max width 1024px */
+@media screen and (max-width: 1024px) {
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 3 - 60PX);
+    }
+}
+
+
+/* Responsive media query code for max width 900px */
+@media screen and (max-width: 900px) {
+    :root {
+    --font-size-m: 1rem;
+    --font-size-1: 1.3rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+    }
+
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-1);
+    }
+
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-1);
+    }
+
+
+    .hero-section .section-content {
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+
+    .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details {
+        max-width: 100%;
+    }
+
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column;
+    }
+
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+    }
+
+
+    .menu-section .menu-list {
+        gap: 30px;
+    }
+
+
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 30PX);
+    }
+
+
+    .menu-section .menu-list .menu-item .menu-image {
+        max-width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .menu-section .menu-list {
+        gap: 60px;
+    }
+
+
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+    }
+}
+
+
+
+
+
